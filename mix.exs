@@ -73,7 +73,10 @@ defmodule Oopserver.MixProject do
       # plain GenServer has no handle_call(:which_children, ...) clause →
       # FunctionClauseError → ex_hash_ring application crashes every 5s.
       {:cachex, "~> 4.0"},
-      {:observer_web, path: "/Users/cameronduley/Personal/observer_web_upstream"}
+      {:observer_web, "~> 0.2.3"}
+      # Patched fork — swap to this line (and remove the hex dep above) to
+      # confirm the fix:
+      # {:observer_web, git: "https://github.com/Moosieus/observer_web", branch: "main"}
     ]
   end
 
